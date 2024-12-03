@@ -1,0 +1,15 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Žalias apvalus fonas -->
+    <rect width="50" height="50" rx="15" fill="#557B6E"/>
+    
+    <!-- WiFi signalai dešinėje viršuje -->
+    <path d="M32 14c2 0 4 1 5 2.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M32 17c1.5 0 2.5 0.8 3.5 2" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Didesnė kepurė -->
+    <path d="M15 21h20c1 0 2 .5 2 1.5v2.5H13v-2.5c0-1 1-1.5 2-1.5z" fill="white"/>
+    
+    <!-- Žaidimų pultelio formos automobilis - platesnis ir žemesnis -->
+    <path d="M13 25h24c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2H13c-1.1 0-2-.9-2-2v-5c0-1.1.9-2 2-2z" fill="white"/>
+    <path d="M17 29h3m10 0h3" stroke="#557B6E" stroke-width="2" stroke-linecap="round"/>
+</svg> 

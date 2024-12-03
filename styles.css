@@ -1,0 +1,433 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/avenir-next');
+
+:root {
+    --primary-color: #557B6E;
+    --text-color: #333333;
+    --background-color: #FDF8F6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi', sans-serif;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 220, 200, 0.5), rgba(255, 220, 200, 0.4));
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 68px 140px 0 140px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-left: 48px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav-links a:first-child {
+    margin-left: 0;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 68px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 170px;
+    left: 180px;
+    width: 495px;
+    height: 375px;
+}
+
+h1 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    width: 495px;
+    margin: 0 0 24px 0;
+    white-space: pre-line;
+}
+
+.text-wrapper {
+    width: 495px;
+}
+
+p {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    width: 495px;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #557B6E, #89A98C);
+    color: white;
+    border: none;
+    width: 350px;
+    height: 73px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    padding-right: 29.3px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 27px 0 26px 0;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.cta-button {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    right: 29.3px;
+    width: 22px;
+    height: 15px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 518px;
+}
+
+.logo img:first-child {
+    width: 68.99px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo img:last-child {
+    width: 127.75px;
+    height: 14.88px;
+    object-fit: contain;
+}
+
+.register-btn {
+    width: 93px;
+    height: 40px;
+    background: linear-gradient(to right, #557B6E, #89A98C);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 48px;
+    font-weight: 500;
+    padding: 0;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+.circle-decoration {
+    position: absolute;
+    left: -140px;
+    bottom: -40px;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Teniso žaidėjos pozicija */
+.hero-image {
+    position: absolute;
+    right: 200px;
+    top: 156px;
+}
+
+/* Apatinio burbuliuko pozicija */
+.circle-decoration-bottom {
+    position: absolute;
+    left: -180px;
+    bottom: -40px;
+    z-index: -1;
+}
+
+/* Viršutinio burbuliuko pozicija */
+.circle-decoration-top {
+    position: absolute;
+    left: 148px;
+    top: -33px;
+    z-index: -1;
+}
+
+/* Kad hero sekcija galėtų talpinti absoliučiai pozicionuotus elementus */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Įsitikinkime, kad nėra kitų elementų, kurie galėtų blokuoti */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.arrow {
+    width: 22px;
+    height: 15px;
+    margin-left: 12px; /* tarpas tarp teksto ir rodyklės */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services {
+    position: relative;
+    padding-left: 140px;
+    padding-right: 177px;
+    display: flex;
+    gap: 124px;
+}
+
+.services-header {
+    width: 495px;
+}
+
+.get-started {
+    background: linear-gradient(to right, #557B6E, #89A98C);
+    color: white;
+    border: none;
+    width: 350px;
+    height: 73px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    padding-right: 29.3px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.get-started .arrow {
+    position: absolute;
+    right: 29.3px;
+    width: 32px;
+    height: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+}
+
+.service-card {
+    width: 270px;
+    padding: 30px;
+    background: none;
+    box-shadow: none;
+}
+
+.service-card:first-child {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 288px;
+    height: 237px;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.service-card p {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+    width: 210px;
+}
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 50%, rgba(255, 220, 200, 0.6), rgba(255, 236, 225, 0.2), transparent);
+    z-index: -1;
+}
+
+/* Viršutinė sekcija */
+.hero-section {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 220, 200, 0.5), rgba(255, 220, 200, 0.4));
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 50%, rgba(255, 220, 200, 0.6), rgba(255, 236, 225, 0.2), transparent);
+    z-index: -1;
+}
+
+/* Beveik nepastebimas perėjimas */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, 
+        rgba(255, 220, 200, 0.1),
+        rgba(245, 245, 245, 0.1),
+        rgba(245, 245, 245, 0.2),
+        #F5F5F5
+    );
+    opacity: 0.3;
+}
+
+/* Apatinė sekcija su pilku fonu */
+.services {
+    background-color: #F5F5F5;
+    padding: 100px 140px;
+    position: relative;
+    margin-top: -50px;
+}
+
+.mot-subtitle {
+    position: relative;
+    color: #FFA500;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    z-index: 2;
+    padding: -4px 20px 0 0;
+    margin-top: -20px;
+    width: 203px;
+    height: 33px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.services-header {
+    position: relative;
+    margin-bottom: 20px;
+    width: 495px;
+    overflow: visible;
+}
+
+.rectangle-bg {
+    position: absolute;
+    left: -140px;
+    top: -60px;
+    width: 717px;
+    height: 153px;
+    z-index: 1;
+}
+
+.mot-subtitle {
+    position: relative;
+    color: #FFA500;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 2;
+    padding: 20px 20px 0 0;
+    margin-top: -20px;
+}
+
+.services-header h2 {
+    position: relative;
+    color: #557B6E;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    z-index: 2;
+    margin: 10px 0 22px 0;
+    letter-spacing: 0.5px;
+}
+
+.services-text {
+    position: relative;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+    z-index: 2;
+    margin: 0 20px 40px 0;
+    width: 412px;
+    height: 83px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Specialiai Bus Trip */
+.service-card:nth-child(3) {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
