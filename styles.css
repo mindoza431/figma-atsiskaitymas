@@ -483,3 +483,77 @@ p {
     width: 221px;
     height: 152px;
 }
+
+/* Papildomi stiliai features sekcijai */
+.features {
+    text-align: center;
+    padding: 140px 140px;
+    position: relative;
+    background-color: #F8F8F8;
+}
+
+.features .mot-subtitle {
+    color: #F2994A;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.features-title {
+    color: #647C64;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 56px;
+    text-align: center;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.feature-card {
+    width: 360px;
+    height: 338px;
+    background: white;
+    border-radius: 4px;
+    padding: 78px 50px 50px 50px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.feature-card-center {
+    background: #647C64;
+    color: white;
+    padding: 78px 50px 50px 50px;
+    text-align: left;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32.78px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.feature-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 260px;
+    word-wrap: break-word;
+    width: 264px;
+}
