@@ -515,12 +515,15 @@ p {
     justify-content: center;
     gap: 40px;
     position: relative;
+    z-index: 1;
 }
 
 .feature-card {
+    position: relative;
+    z-index: 2;
+    background: white;
     width: 360px;
     height: 338px;
-    background: white;
     border-radius: 4px;
     padding: 78px 50px 50px 50px;
     text-align: left;
@@ -556,4 +559,31 @@ p {
     max-width: 260px;
     word-wrap: break-word;
     width: 264px;
+}
+
+.dots-left {
+    position: absolute;
+    left: 307px;
+    top: 74%;
+    transform: translateY(-50%);
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+}
+
+.orange-circle {
+    position: absolute;
+    right: 150px;
+    top: 75%;
+    transform: translateY(-50%);
+    z-index: 0;
+    width: 350px;
+    height: 300px;
+    pointer-events: none;
+}
+
+.first-card, .last-card {
+    position: relative;
+    overflow: visible;
 }
