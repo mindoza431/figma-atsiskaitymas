@@ -2,9 +2,36 @@
 @import url('https://fonts.cdnfonts.com/css/avenir-next');
 
 :root {
-    --primary-color: #557B6E;
-    --text-color: #333333;
-    --background-color: #FDF8F6;
+    /* Spalvos */
+    --color-primary: #647B64;
+    --color-secondary: #66AC66;
+    --color-white: #FFFFFF;
+    --color-border: #DDD;
+    --color-background: #F0DCC5;
+
+    /* Gradientai */
+    --gradient-primary: linear-gradient(102.3deg, var(--color-primary) -4.62%, var(--color-secondary) 178.22%);
+
+    /* Dydžiai */
+    --button-width: 283px;
+    --button-height: 56.6px;
+    --logo-width: 48.4px;
+    --logo-height: 35.08px;
+    --logo2-width: 128.75px;
+    --logo2-height: 14.88px;
+
+    /* Tarpai */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+
+    /* Šriftai */
+    --font-family-primary: 'Satoshi', sans-serif;
+    --font-family-secondary: 'Avenir Next', sans-serif;
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 20px;
 }
 
 body {
@@ -1007,8 +1034,11 @@ p {
 .footer-newsletter .get-started span {
     width: 124px;
     height: 15px;
-    font-size: 14px;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: 15px;
     text-align: center;
+    white-space: nowrap;
 }
 
 /* Send Message heading */
@@ -1108,29 +1138,29 @@ p {
 }
 
 .footer-send-btn {
-    width: 283px;
-    height: 56.6px;
-    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    width: var(--button-width);
+    height: var(--button-height);
+    background: var(--gradient-primary);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    padding-left: var(--spacing-sm);
+    color: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Satoshi', sans-serif;
-    font-size: 14px;
-    color: #FFFFFF;
     gap: 8px;
-    padding-left: 12px;
 }
 
 .footer-send-btn span {
     width: 124px;
     height: 15px;
-    font-family: 'Satoshi', sans-serif;
-    font-size: 14px;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
     line-height: 15px;
-    text-align: left;
+    text-align: center;
     white-space: nowrap;
 }
 
