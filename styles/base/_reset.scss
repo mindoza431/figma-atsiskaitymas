@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-primary;
+    background: rgb(252, 248, 245);
+} 

@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 68px;
+    background: linear-gradient(
+        to right,
+        rgb(252, 248, 245),
+        #FFF9F7 30%,
+        #FFF5F2 70%,
+        #FFF0EB 100%
+    );
+    z-index: 1;
+    overflow: visible;
+
+    &-content {
+        position: absolute;
+        top: 170px;
+        left: 180px;
+        width: 495px;
+        height: 375px;
+    }
+
+    &-image {
+        position: absolute;
+        right: 200px;
+        top: 156px;
+        z-index: 1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+h1 {
+    font-family: $font-family-primary;
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    width: 495px;
+    margin: 0 0 24px 0;
+    white-space: pre-line;
+}
+
+.text-wrapper {
+    width: 495px;
+}
+
+p {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    width: 495px;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.cta-button {
+    background: $gradient-primary;
+    color: $color-white;
+    border: none;
+    width: 350px;
+    height: 73px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    padding-right: 29.3px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 27px 0 26px 0;
+    position: relative;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    .arrow {
+        position: absolute;
+        right: 29.3px;
+        width: 22px;
+        height: 15px;
+    }
+}
+
+

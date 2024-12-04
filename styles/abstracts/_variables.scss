@@ -1,0 +1,60 @@
+// Spalvos
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/avenir-next');
+
+// Spalvos
+$color-primary: #647B64;
+$color-secondary: #66AC66;
+$color-white: #FFFFFF;
+$color-border: #DDD;
+$color-background: #F0DCC5;
+$color-text: #666666;
+$color-heading: #557B6E;
+$color-orange: #FFA500;
+
+// Gradientai
+$gradient-primary: linear-gradient(102.3deg, $color-primary -4.62%, $color-secondary 178.22%);
+$gradient-background: linear-gradient(
+    to right,
+    rgb(252, 248, 245),    // Šviesiai kreminė
+    #FFF9F7 30%,           // Labai švelni rausva
+    #FFF5F2 70%,           // Labai švelni persiko spalva
+    #FFF0EB 100%           // Švelni persiko-rausva
+);
+
+// Dydžiai
+$button-width: 283px;
+$button-height: 56.6px;
+$logo-width: 48.4px;
+$logo-height: 35.08px;
+$logo2-width: 128.75px;
+$logo2-height: 14.88px;
+
+// Tarpai
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+
+// Šriftai
+$font-family-primary: 'Satoshi', sans-serif;
+$font-family-secondary: 'Avenir Next', sans-serif;
+$font-size-base: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 20px;
+$font-size-h1: 38px;
+$font-size-h2: 24px;
+$font-size-h3: 20px;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+// Breakpoints
+$mobile: 375px;
+$tablet: 620px;$desktop: 768px;

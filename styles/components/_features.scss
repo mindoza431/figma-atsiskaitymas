@@ -1,0 +1,31 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.features {
+    padding: 60px 140px;
+    
+    &-grid {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    &-card {
+        background: none;
+        padding: 20px;
+        text-align: center;
+
+        h3 {
+            font-family: $font-family-primary;
+            font-size: $font-size-lg;
+            color: $color-heading;
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: $font-size-base;
+            color: $color-text;
+            line-height: 1.5;
+        }
+    }
+}
