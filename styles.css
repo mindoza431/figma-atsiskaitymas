@@ -8,11 +8,10 @@
 }
 
 body {
-    background: #FFF;
     margin: 0;
     padding: 0;
     font-family: 'Satoshi', sans-serif;
-    background: linear-gradient(to right, #FFF9F5, #FFF3EA, #FFF9F5);
+    background: rgb(252, 248, 245);
 }
 
 .navbar {
@@ -20,6 +19,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 68px 140px 0 140px;
+    background: linear-gradient(
+        to right,
+        rgb(252, 248, 245),    /* Šviesiai kreminė vietoj baltos */
+        #FFF9F7 30%,           /* Labai švelni rausva */
+        #FFF5F2 70%,           /* Labai švelni persiko spalva */
+        #FFF0EB 100%           /* Švelni persiko-rausva */
+    );
+    z-index: 2;
+    position: relative;
 }
 
 .nav-links {
@@ -44,6 +52,15 @@ body {
     min-height: 100vh;
     position: relative;
     padding-top: 68px;
+    background: linear-gradient(
+        to right,
+        rgb(252, 248, 245),    /* Šviesiai kreminė vietoj baltos */
+        #FFF9F7 30%,           /* Labai švelni rausva */
+        #FFF5F2 70%,           /* Labai švelni persiko spalva */
+        #FFF0EB 100%           /* Švelni persiko-rausva */
+    );
+    z-index: 1;
+    overflow: visible;
 }
 
 .hero-content {
@@ -180,6 +197,7 @@ p {
     position: absolute;
     right: 200px;
     top: 156px;
+    z-index: 1;
 }
 
 /* Apatinio burbuliuko pozicija */
@@ -187,7 +205,14 @@ p {
     position: absolute;
     left: -180px;
     bottom: -40px;
-    z-index: -1;
+    z-index: 2;
+}
+
+.circle-decoration-bottom img {
+    display: block;
+    opacity: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Viršutinio burbuliuko pozicija */
@@ -195,7 +220,14 @@ p {
     position: absolute;
     left: 148px;
     top: -33px;
-    z-index: -1;
+    z-index: 2;
+}
+
+.circle-decoration-top img {
+    display: block;
+    opacity: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Kad hero sekcija galėtų talpinti absoliučiai pozicionuotus elementus */
@@ -226,6 +258,7 @@ p {
     padding-right: 177px;
     display: flex;
     gap: 80px;
+    background: none;
 }
 
 .services-header {
@@ -261,21 +294,20 @@ p {
     grid-template-columns: repeat(2, 270px);
     grid-template-rows: repeat(2, auto);
     row-gap: 97px;
+    background: none;
 }
 
-.service-card {
-    width: 270px;
-    padding: 30px;
+.service-card,
+.feature-card,
+.testimonial-card {
     background: none;
-    box-shadow: none;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 .service-card:first-child {
-    background: white;
-    border-radius: 12px;
+    background: #FFFFFF;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    width: 288px;
-    height: 237px;
 }
 
 .service-icon {
@@ -314,61 +346,40 @@ p {
 
 .hero-section {
     position: relative;
+    background: #FFF !important;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.gradient-overlay {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 180, 140, 0.75) 0%,    /* Šviesesnė persiko spalva */
+        rgba(255, 200, 160, 0.65) 30%,   /* Dar šviesesnė */
+        rgba(255, 220, 180, 0.45) 50%,   /* Beveik balta su persiko atspalviu */
+        rgba(255, 255, 255, 0) 70%       /* Išnyksta į baltą */
+    );
+    transform: translate(20%, -20%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-image {
+    position: absolute;
+    right: 200px;
+    top: 156px;
     z-index: 1;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 50%, rgba(255, 243, 234, 0.8), rgba(255, 249, 245, 0.3), transparent);
-    z-index: -1;
-}
-
-/* Viršutinė sekcija */
-.hero-section {
-    background: linear-gradient(to right, #FFF9F5, #FFF3EA, #FFF9F5);
-    padding-bottom: 100px;
-    position: relative;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 50%, rgba(255, 243, 234, 0.8), rgba(255, 249, 245, 0.3), transparent);
-    z-index: -1;
-}
-
-/*  nepastebimas perėjimas */
-.hero-section::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, 
-        rgba(255, 243, 234, 0.1),
-        rgba(245, 245, 245, 0.1),
-        rgba(245, 245, 245, 0.2),
-        #F5F5F5
-    );
-    opacity: 0.3;
-}
-
-/* Apatinė sekcija su pilku fonu */
-.services {
-    background-color: #F5F5F5;
-    padding: 100px 140px;
-    position: relative;
-    margin-top: -50px;
+.hero-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 .mot-subtitle {
@@ -489,7 +500,7 @@ p {
     text-align: center;
     padding: 140px 140px;
     position: relative;
-    background-color: #F8F8F8;
+    background-color: #ffffff;
 }
 
 .features .mot-subtitle {
@@ -521,13 +532,11 @@ p {
 .feature-card {
     position: relative;
     z-index: 2;
-    background: white;
-    width: 360px;
-    height: 338px;
-    border-radius: 4px;
-    padding: 78px 50px 50px 50px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 30px;
     text-align: left;
-    box-sizing: border-box;
 }
 
 .feature-card-center {
@@ -563,8 +572,8 @@ p {
 
 .dots-left {
     position: absolute;
-    left: 307px;
-    top: 74%;
+    left: 347px;
+    top: 72%;
     transform: translateY(-50%);
     z-index: 0;
     width: 200px;
@@ -822,8 +831,9 @@ p {
 }
 
 .footer {
-    background-color: #F3E4D7;
+    background-color: #F0DCC5;
     padding: 60px 140px;
+    padding-bottom: 102px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 2fr;
     gap: 40px;
@@ -845,7 +855,7 @@ p {
     font-family: 'Avenir Next', sans-serif;
     font-size: 14px;
     color: #666666;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .footer-social {
@@ -860,12 +870,17 @@ p {
     opacity: 0.7;
 }
 
-.footer-column h3 {
+.footer-column {
+    width: 160px;
+    height: 26px;
     font-family: 'Avenir Next', sans-serif;
-    font-size: 18px;
-    color: #557B6E;
-    margin-bottom: 24px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity: 1;  /* Pakeista iš 0px į 1 */
 }
 
 .footer-column ul {
@@ -875,7 +890,11 @@ p {
 }
 
 .footer-column li {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+}
+
+.footer-column li:last-child {
+    margin-bottom: 0;
 }
 
 .footer-column a {
@@ -892,8 +911,81 @@ p {
     margin-bottom: 24px;
 }
 
+.footer-newsletter textarea {
+    width: 283px;
+    height: 113px !important;
+    min-height: 113px;
+    font-family: 'Avenir Next', sans-serif;
+    padding: 12px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    resize: none;
+    vertical-align: top;
+}
+
+.footer-newsletter textarea::placeholder {
+    vertical-align: top;
+}
+
+.footer-newsletter .get-started {
+    width: 283px;
+    height: 56.6px;
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-newsletter .get-started span {
+    width: 124px;
+    height: 15px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+}
+
+.footer-newsletter h3 {
+    width: 165px;
+    height: 20px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity: 1;  /* Pakeista iš 0px į 1 */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column h3 {
+    width: 160px;
+    height: 30px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    color: #557B6E;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+/* Email input section */
+.footer-newsletter {
+    width: 283px;
+    height: 113px;
+    position: relative;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 1;  /* Pakeista iš 0 į 1, kad būtų matoma */
+}
+
 .footer-newsletter input {
-    width: 100%;
+    width: 283px;
     padding: 12px;
     border: 1px solid #DDD;
     border-radius: 4px;
@@ -901,22 +993,154 @@ p {
     font-family: 'Avenir Next', sans-serif;
 }
 
+/* Send Message button */
 .footer-newsletter .get-started {
-    width: 100%;
-    margin-top: 10px;
+    width: 283px;
+    height: 56.6px;
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Pridedame bendrą foną body elementui */
-body {
-    background: #FFF;  /* Baltas fonas visam puslapiui */
+/* Button text */
+.footer-newsletter .get-started span {
+    width: 124px;
+    height: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Send Message heading */
+.footer-newsletter h3 {
+    width: 165px;
+    height: 20px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    color: #557B6E;
+    margin-bottom: 24px;
+}
+
+/* Company heading */
+.footer-column h3 {
+    width: 160px;
+    height: 30px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    color: #557B6E;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.footer-brand p:last-of-type {
+    width: 195px;
+    height: 24px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #666666;
     margin: 0;
-    padding: 0;
+    opacity: 1;
 }
 
-.footer {
-    background-color: #F3E4D7;
-    padding: 60px 140px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr;
-    gap: 40px;
+.footer-copyright {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 0;
 }
+
+.features, .about-section, .testimonials {
+    background: none;
+}
+
+.footer-text {
+    width: 118px;
+    height: 26px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity: 1;
+}
+
+.footer-text a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+
+
+.button.get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 73px;
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.button.get-started span {
+    width: 135px;
+    height: 20px;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.08px;
+    letter-spacing: 0.155em;
+    color: #FFFFFF;
+}
+
+.button.get-started .arrow {
+    width: 17px;
+    height: 11.63px;
+}
+
+.footer-send-btn {
+    width: 283px;
+    height: 56.6px;
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    gap: 8px;
+    padding-left: 12px;
+}
+
+.footer-send-btn span {
+    width: 124px;
+    height: 15px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.footer-send-btn .arrow {
+    width: 17px;
+    height: 11.63px;
+}
+
+
+
+
+
+
